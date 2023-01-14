@@ -1,31 +1,37 @@
 (define (problem problem_1) (:domain emergency_services_logistics)
 (:objects 
     depot loc1 loc2 - location
-    p1 p2 - person
+    alberto alessio stefano - person
     r1 - robot
     b1 - box
-    food medicine - deliverable
+    banana apple - food
+    aspirin - medicine
 )
 
 (:init
+    ;box location
     (at b1 depot)
     (empty b1)
+
+    ;robot location
     (at r1 depot)
-    (at food depot)
-    (at medicine depot)
-    (at p1 loc1)
-    (at p2 loc2)
     (is_empty r1)
-    (not (has_content p1 food))
-    (need p1 food)
-    (not (has_content p2 food))
-    (need p2 food)
+
+    ;deliverable location
+    (at banana depot)(at aspirin depot)(at apple depot)
+
+    ;people location
+    (at alessio loc1)(at stefano loc1)(at alberto loc2)
 )
 
 (:goal (and
-    (has_content p1 food)
-    (not (need p1 food))
-    (has_content p2 food)
-    (not (need p2 food))
+    ;alessio needs banana
+    (has_content alessio banana)
+
+    ;stefano needs aspirin
+    (has_content stefano aspirin)
+
+    ;alberto needs banana
+    (has_content alberto apple)
 ))
 )
