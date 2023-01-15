@@ -14,11 +14,10 @@
     food medicine tools - deliverable)
     
 
-  ; Define the relations
   (:predicates
     (at ?t - thing ?l - location)    ;box/person/robot/deliverable is at location l
     (empty ?b - box)         ;box ?b is empty
-    (filled ?b - box ?d - deliverable)  ;box ?b is filled with deliverable ?d            ###Assumption --> maximum one deliverable 
+    (filled ?b - box ?d - deliverable)  ;box ?b is filled with deliverable ?d         Assumption --> maximum one deliverable 
     (has_content ?p - person ?d - deliverable)     ;person ?p has deliverable ?d
     (loaded ?r - robot ?b - box)        ;robot ?r is loaded with box ?b
     (is_empty ?r - robot)           ;robot ?r is empty
