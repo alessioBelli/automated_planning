@@ -1,0 +1,28 @@
+optic -N -W1,1 domain.pddl problem.pddl
+; States evaluated: 130
+; Cost: 97.020
+; Time 0.28
+0.000: (fill r1 b1 hammer depot)  [3.000]
+3.001: (load r1 b1 c1 depot capacity_3 capacity_4)  [5.000]
+8.002: (move_carrier r1 c1 depot loc2)  [6.000]
+14.003: (unload r1 b1 c1 loc2 capacity_3 capacity_4)  [5.000]
+19.004: (return_to_depot r1 c1 loc2 depot capacity_4)  [6.000]
+25.005: (fill r1 b2 banana depot)  [3.000]
+28.006: (move_carrier r1 c1 depot loc2)  [6.000]
+34.007: (empty_box r1 b1 hammer loc2)  [3.000]
+37.007: (serve_person hammer loc2 stefano)  [1.000]
+37.008: (return_to_depot r1 c1 loc2 depot capacity_4)  [6.000]
+43.009: (empty_box r1 b2 banana depot)  [3.000]
+46.010: (fill r1 b2 apple depot)  [3.000]
+49.011: (load r1 b2 c1 depot capacity_3 capacity_4)  [5.000]
+54.012: (move_carrier r1 c1 depot loc1)  [6.000]
+60.013: (unload r1 b2 c1 loc1 capacity_3 capacity_4)  [5.000]
+65.014: (empty_box r1 b2 apple loc1)  [3.000]
+68.014: (serve_person apple loc1 alessio)  [1.000]
+68.015: (return_to_depot r1 c1 loc1 depot capacity_4)  [6.000]
+74.016: (fill r1 b3 banana depot)  [3.000]
+77.017: (load r1 b3 c1 depot capacity_3 capacity_4)  [5.000]
+82.018: (move_carrier r1 c1 depot loc1)  [6.000]
+88.019: (unload r1 b3 c1 loc1 capacity_3 capacity_4)  [5.000]
+93.020: (empty_box r1 b3 banana loc1)  [3.000]
+96.020: (serve_person banana loc1 alberto)  [1.000]

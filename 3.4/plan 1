@@ -1,0 +1,22 @@
+optic -N -E -W1,1 domain.pddl problem.pddl
+; States evaluated: 17096
+; Cost: 67.014
+; Time 17.32
+0.000: (fill r1 b1 hammer depot)  [3.000]
+3.001: (load r1 b1 c1 depot cap_3 cap_4)  [5.000]
+8.002: (move_carrier r1 c1 depot loc2)  [6.000]
+14.003: (unload r1 b1 c1 loc2 cap_3 cap_4)  [5.000]
+19.004: (empty_box r1 b1 hammer loc2)  [3.000]
+22.004: (serve_person hammer loc2 stefano)  [1.000]
+22.005: (return_to_depot r1 c1 loc2 depot cap_4)  [6.000]
+28.006: (fill r1 b3 banana depot)  [3.000]
+31.007: (fill r1 b2 apple depot)  [3.000]
+34.008: (load r1 b2 c1 depot cap_3 cap_4)  [5.000]
+39.009: (load r1 b3 c1 depot cap_2 cap_3)  [5.000]
+44.010: (move_carrier r1 c1 depot loc1)  [6.000]
+50.011: (unload r1 b3 c1 loc1 cap_2 cap_3)  [5.000]
+55.012: (unload r1 b2 c1 loc1 cap_3 cap_4)  [5.000]
+60.013: (empty_box r1 b3 banana loc1)  [3.000]
+63.013: (serve_person banana loc1 alberto)  [1.000]
+63.014: (empty_box r1 b2 apple loc1)  [3.000]
+66.014: (serve_person apple loc1 alessio)  [1.000]

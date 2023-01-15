@@ -21,7 +21,7 @@
     (empty ?b - box)         ;box ?b is empty
     (filled ?b - box ?d - deliverable)  ;box ?b is filled with deliverable ?d       Assumption --> maximum one deliverable 
     (loaded ?b - box ?c - carrier)      ;box ?b is loaded on carrier ?c
-    (free ?b)      ; box ?b is not loaded on a carrier
+    (free ?b - box)      ; box ?b is not loaded on a carrier
     (has_content ?p - person ?d - deliverable)    ;person ?p has deliverable ?d
     (capacity ?c - carrier ?n - capacity_number)    ;the current available capacity ?n of the carrier ?c
     (capacity_succ ?n1 - capacity_number ?n2 - capacity_number)     ;capacity number ?n1 is the one after capacity number ?n2
