@@ -1,4 +1,4 @@
-(define (problem problem_2) (:domain emergency_services_logistics)
+(define (problem problem_4) (:domain emergency_services_logistics)
 (:objects 
     depot - depot
     loc1 loc2 loc3 - loc

@@ -41,6 +41,3 @@
     (has_content Alberto banana)(has_content Alessio apple)(has_content Stefano hammer)
 ))
 )
-
-
-;nel report metter esempio con due box e tre deliverable
