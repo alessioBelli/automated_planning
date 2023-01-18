@@ -1,7 +1,7 @@
 # Automated Planning: Theory and Practice | Assignment :robot:
 
 The aim of this assignment is twofold. First to model planning problems in PDDL/HDDL to then invoke a state of the art planner as those provided by planutils or manually compiled (e.g., fast downward, or optic). Second, to see how a temporal model could be integrated within a robotic setting leveraging the PlanSys2 infrastructure discussed in the lectures and available at https://github.com/PlanSys2/ros2_planning_system.
-## The scenario
+## The scenario :scroll:
 Let us consider a scenario inspired by an emergency services logistics problem, where a number of persons at known a priori locations (and not moving) have been injured. The objective of the planning systems is to orchestrate the activities of a set of different robotic agents to deliver boxes containing emergency supplies to each person.
 Let’s consider these assumptions:
 - Each injured person is at a specific location, and does not move.
