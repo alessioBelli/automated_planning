@@ -1,0 +1,51 @@
+set instance depot depot
+set instance loc1 loc
+set instance loc2 loc
+set instance loc3 loc 
+set instance alberto person
+set instance alessio person
+set instance stefano person
+set instance r1 robot
+set instance b1 box
+set instance b2 box
+set instance b3 box
+set instance c1 carrier
+set instance banana deliverable
+set instance apple deliverable
+set instance hammer deliverable
+
+set instance capacity_0 capacity_number
+set instance capacity_1 capacity_number
+set instance capacity_2 capacity_number
+set instance capacity_3 capacity_number
+
+set predicate (capacity c1 capacity_4)
+set predicate (capacity_succ capacity_1 capacity_0)
+set predicate (capacity_succ capacity_2 capacity_1)
+set predicate (capacity_succ capacity_3 capacity_2)
+set predicate (capacity_succ capacity_4 capacity_3)
+
+set predicate (at_loc b1 depot)
+set predicate (at_loc b2 depot)
+set predicate (at_loc b3 depot)
+set predicate (empty b1)
+set predicate (empty b2)
+set predicate (empty b3)
+set predicate (free b1)
+set predicate (free b2)
+set predicate (free b3)
+
+set predicate (at_loc r1 depot)
+set predicate (is_available r1)
+
+set predicate (at_loc c1 depot)
+
+set predicate (at_loc banana depot)
+set predicate (at_loc apple depot)
+set predicate (at_loc hammer depot)
+
+set predicate (at_loc alberto loc1)
+set predicate (at_loc alessio loc1)
+set predicate (at_loc stefano loc2)
+
+set goal (and (has_content alberto banana)(has_content alessio apple)(has_content stefano hammer))
