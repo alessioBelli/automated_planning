@@ -77,7 +77,7 @@
     )
   )
 
-  ;; empty a box by leaving the content to the current location
+	;; serve a person with deliverable d (make has_content ?p ?d true)
   (:durative-action serve_person
     :parameters (?d - deliverable ?l - location ?p - person)
     :duration (= ?duration 1)
