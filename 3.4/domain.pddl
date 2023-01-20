@@ -156,7 +156,7 @@
     )
   )
 
-  ;; the robotic agent can move the carrier to a location
+  ;; the robotic agent can move the carrier to the depot after all boxes on the carrier have been delivered
   (:durative-action return_to_depot
     :parameters (?r - robot ?c - carrier ?source - location ?destination - depot ?n - capacity_number)
     :duration (and (>= ?duration 6) (<= ?duration 12))
