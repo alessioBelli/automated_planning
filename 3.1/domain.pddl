@@ -57,13 +57,12 @@
     )
   )
 
-;; serve a person in a specific location with a needed content
+  ;; serve a person in a specific location with a needed content
   (:action serve_person
     :parameters (?d - deliverable ?l - location ?p - person)
     :precondition (and
       (at ?p ?l)
       (at ?d ?l)
-      (not (has_content ?p ?d))
     )
     :effect (and
       (has_content ?p ?d)
@@ -85,7 +84,7 @@
     )
   )
   
-  ;; move to another location moving the loaded box (if the box has been loaded, otherwise it simply moves)
+  ;; move to another location moving the loaded box
   (:action move_with_box
     :parameters (?r - robot ?source - location ?destination - location ?b - box)
     :precondition (and
@@ -99,7 +98,7 @@
     )
   )
 
-  ;; move to another location moving the loaded box (if the box has been loaded, otherwise it simply moves)
+  ;; move to another location without any box
   (:action move_without_box
     :parameters (?r - robot ?source - location ?destination - location)
     :precondition (and
