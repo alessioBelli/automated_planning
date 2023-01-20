@@ -1,4 +1,4 @@
-(define (domain emergency_services_logistics) ; Domain name must match problem's
+(define (domain emergency_services_logistics)
 
   (:requirements
     :strips

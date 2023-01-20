@@ -1,4 +1,4 @@
-(define (domain emergency_services_logistics) ; Domain name must match problem's
+(define (domain emergency_services_logistics)
 
   (:requirements
     :strips
@@ -15,7 +15,6 @@
     food medicine tools - deliverable
     capacity_number - object)
 
-  ; Define the relations
   (:predicates
     (at_loc ?t - thing ?l - location)    ;box/person/robot/deliverable is at location l
     (empty ?b - box)         ;box ?b is empty
@@ -67,7 +66,6 @@
     :precondition (and
       (at_loc ?p ?l)
       (at_loc ?d ?l)
-      (not (has_content ?p ?d))
     )
     :effect (and
       (has_content ?p ?d)
@@ -127,7 +125,7 @@
     )
   )
 
-  ;; the robotic agent can move the carrier to a location
+  ;; the robotic agent can move the carrier to the depot after all boxes on the carrier have been delivered
   (:action return_to_depot
     :parameters (?r - robot ?c - carrier ?source - location ?destination - depot ?n - capacity_number ?n1 - capacity_number)
     :precondition (and
