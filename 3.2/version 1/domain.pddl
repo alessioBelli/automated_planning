@@ -70,7 +70,6 @@
     :precondition (and
       (at_loc ?p ?l)
       (at_loc ?d ?l)
-      (not (has_content ?p ?d))
     )
     :effect (and
       (has_content ?p ?d)
@@ -125,7 +124,7 @@
     )
   )
 
-  ;; the robotic agent can move the carrier to a location
+  ;; the robotic agent can move the carrier to the depot after all boxes on the carrier have been delivered
   (:action return_to_depot
     :parameters (?r - robot ?c - carrier ?source - location ?destination - depot)
     :precondition (and
