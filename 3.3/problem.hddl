@@ -2,7 +2,7 @@
     (:objects 
         depot - depot
         loc1 loc2 loc3 - loc
-        Alberto Alessio Stefano Alice - person
+        alberto alessio stefano alice - person
         r1 - robot
         b1 b2 b3 b4 - box
         c1 - carrier
@@ -14,9 +14,9 @@
     (:htn
         :parameters ()
         :subtasks (and
-            (task0 (deliver banana Alberto))
-            (task1 (deliver apple Alessio))
-            (task2 (deliver hammer Stefano))
+            (task0 (deliver banana alberto))
+            (task1 (deliver apple alessio))
+            (task2 (deliver hammer stefano))
         )
         :ordering (and
             (task0 < task1)
@@ -49,6 +49,9 @@
         (at_loc banana depot)(at_loc apple depot)(at_loc hammer depot)(at_loc tablet depot)(at_loc cookie depot)
 
         ;people location
-        (at_loc Alberto loc1)(at_loc Alessio loc1)(at_loc Stefano loc2)(at_loc Alice loc3)
+        (at_loc alberto loc1)(at_loc alessio loc1)(at_loc stefano loc2)(at_loc alice loc3)
+
+        ;alberto needs a banana, alessio needs an apple, stefano needs an hammer
+        (need alberto banana)(need alessio apple)(need stefano hammer)
     )
 )

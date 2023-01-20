@@ -1,4 +1,4 @@
-(define (domain emergency_services_logistics) ; Domain name must match problem's
+(define (domain emergency_services_logistics)
 
   (:requirements
     :strips
@@ -27,6 +27,7 @@
     (has_content ?p - person ?d - deliverable)   ;person ?p has deliverable ?d
     (capacity ?c - carrier ?n - capacity_number)    ;the current available capacity ?n of the carrier ?c
     (capacity_succ ?n1 - capacity_number ?n2 - capacity_number)     ;capacity number ?n1 is the one after capacity number ?n2
+    (need ?p - person ?d - deliverable) ;person ?p needs deliverable ?d
   )
 
   (:task deliver
@@ -186,7 +187,8 @@
 			)
 		:effect ()
 	)
-    ;; fill a box with a content
+  
+  ;; fill a box with a content
   (:action fill
     :parameters (?r - robot ?b - box ?d - deliverable ?l - location)
     :precondition (and
@@ -220,16 +222,17 @@
     )
   )
 
-;; serve a person with deliverable d (make has_content ?p ?d true)
+  ;; serve a person with deliverable d (make has_content ?p ?d true)
   (:action serve_person
     :parameters (?d - deliverable ?l - location ?p - person)
     :precondition (and
       (at_loc ?p ?l)
       (at_loc ?d ?l)
-      (not (has_content ?p ?d))
+      (need ?p ?d)
     )
     :effect (and
       (has_content ?p ?d)
+      (not (need ?p ?d))
     )
   )
 
@@ -286,7 +289,7 @@
     )
   )
 
-  ;; the robotic agent can move the carrier to a location
+  ;; the robotic agent can move the carrier to the depot after all boxes on the carrier have been delivered
   (:action return_to_depot
     :parameters (?r - robot ?c - carrier ?source - location ?destination - depot ?n - capacity_number ?n1 - capacity_number)
     :precondition (and
