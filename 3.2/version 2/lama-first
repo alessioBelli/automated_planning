@@ -1,3 +1,4 @@
+lama-first domain.pddl problem.pddl
 (load r1 b1 c1 depot capacity_3 capacity_4)
 (fill r1 b4 apple depot)
 (load r1 b4 c1 depot capacity_2 capacity_3)

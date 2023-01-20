@@ -1,3 +1,4 @@
+downward domain.pddl problem.pddl --search "astar(add())"
 (load r1 b1 c1 depot capacity_3 capacity_4)
 (fill r1 b2 apple depot)
 (fill r1 b3 banana depot)

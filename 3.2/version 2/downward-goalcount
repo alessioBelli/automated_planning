@@ -1,3 +1,4 @@
+downward domain.pddl problem.pddl --search "astar(goalcount())"
 (fill r1 b1 apple depot)
 (load r1 b1 c1 depot capacity_3 capacity_4)
 (fill r1 b2 banana depot)

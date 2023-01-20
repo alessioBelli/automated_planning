@@ -1,3 +1,4 @@
+enhsp-2019 -o domain.pddl -f problem.pddl -planner sat-aibr
 (load r1 b4 c1 depot)
 (load r1 b1 c1 depot)
 (fill r1 b3 hammer depot)

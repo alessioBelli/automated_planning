@@ -1,3 +1,4 @@
+java -jar PANDA.jar -parser hddl domain.hddl problem.hddl
 SOLUTION SEQUENCE
 0: noop(r1,c1,depot)
 1: fill(r1,b2,banana,depot)
